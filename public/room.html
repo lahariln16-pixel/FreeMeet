@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FreeMeet</title>
+
+    <link rel="stylesheet" href="/room.css">
+</head>
+
+<body>
+
+    <header class="room-header">
+
+        <div class="logo">
+            <span class="logo-dot"></span>
+            FreeMeet
+        </div>
+
+        <div class="room-info">
+            Room:
+            <strong id="roomId">------</strong>
+
+            <button id="copyRoom">
+                Copy
+            </button>
+        </div>
+
+    </header>
+
+
+    <main class="meeting">
+
+        <section
+            id="videoGrid"
+            class="video-grid"
+        >
+
+            <div class="video-card local">
+
+                <video
+                    id="localVideo"
+                    autoplay
+                    muted
+                    playsinline
+                ></video>
+
+                <div
+                    id="localName"
+                    class="name"
+                >
+                    You
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAT -->
+
+        <aside
+            id="chatPanel"
+            class="chat-panel"
+        >
+
+            <div class="chat-header">
+                <span>Chat</span>
+
+                <button id="closeChat">
+                    ✕
+                </button>
+            </div>
+
+
+            <div
+                id="chatMessages"
+                class="chat-messages"
+            ></div>
+
+
+            <div class="chat-input-area">
+
+                <input
+                    id="chatInput"
+                    type="text"
+                    placeholder="Send a message..."
+                    maxlength="500"
+                >
+
+                <button id="sendChat">
+                    ➤
+                </button>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <footer class="controls">
+
+        <button
+            id="micButton"
+            class="control"
+            title="Microphone"
+        >
+            🎤
+        </button>
+
+
+        <button
+            id="cameraButton"
+            class="control"
+            title="Camera"
+        >
+            📹
+        </button>
+
+
+        <button
+            id="screenButton"
+            class="control"
+            title="Share screen"
+        >
+            🖥️
+        </button>
+
+
+        <button
+            id="chatButton"
+            class="control"
+            title="Chat"
+        >
+            💬
+        </button>
+
+
+        <button
+            id="leaveButton"
+            class="control leave"
+            title="Leave meeting"
+        >
+            📞
+        </button>
+
+    </footer>
+
+
+    <script src="/room.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeMeet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="logo">
+            <span class="logo-dot"></span>
+            FreeMeet
+        </div>
+
+        <div class="top-right">
+            <span id="clock"></span>
+        </div>
+    </header>
+
+    <main class="home">
+
+        <section class="hero">
+            <h1>Video meetings.<br><span>Made simple.</span></h1>
+
+            <p>
+                Connect with your friends, classmates and teammates
+                using free video meetings.
+            </p>
+
+            <div class="actions">
+<input
+    id="userName"
+    type="text"
+    placeholder="Enter your name"
+    maxlength="30"
+>
+                <button id="newMeeting" class="primary">
+                    + New meeting
+                </button>
+
+                <div class="join-box">
+                    <input
+                        id="meetingCode"
+                        type="text"
+                        placeholder="Enter meeting code"
+                        maxlength="12"
+                    >
+
+                    <button id="joinMeeting">
+                        Join
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="preview">
+            <div class="preview-card">
+
+                <div class="preview-top">
+                    <span>Preview</span>
+                    <span class="status">
+                        ● Ready
+                    </span>
+                </div>
+
+                <div class="camera-box">
+                    <video id="previewVideo" autoplay muted playsinline></video>
+
+                    <div id="cameraMessage">
+                        Camera preview
+                    </div>
+                </div>
+
+                <div class="preview-controls">
+                    <button id="toggleMic">🎤</button>
+                    <button id="toggleCamera">📹</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        FreeMeet • Free and open video meetings
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
