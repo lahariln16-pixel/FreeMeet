@@ -3,92 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreeMeet</title>
+    <meta name="theme-color" content="#10131c">
+    <title>FreeMeet — Meet without the fuss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <header class="topbar">
-        <div class="logo">
-            <span class="logo-dot"></span>
-            FreeMeet
-        </div>
-
-        <div class="top-right">
-            <span id="clock"></span>
-        </div>
+        <a class="logo" href="/" aria-label="FreeMeet home"><span class="logo-mark"><span></span><span></span><span></span><span></span></span>FreeMeet</a>
+        <div class="top-right"><span class="secure-dot"></span><span>Simple, private conversations</span><span class="top-divider"></span><span id="clock"></span></div>
     </header>
-
     <main class="home">
-
         <section class="hero">
-            <h1>Video meetings.<br><span>Made simple.</span></h1>
-
-            <p>
-                Connect with your friends, classmates and teammates
-                using free video meetings.
-            </p>
-
+            <div class="eyebrow"><span class="eyebrow-icon">✳</span> GOOD CONVERSATIONS START HERE</div>
+            <h1>Bring everyone<br>closer, <span>wherever.</span></h1>
+            <p class="hero-copy">A little less distance. A lot more connection. Start a free meeting in seconds, with the people who matter.</p>
             <div class="actions">
-<input
-    id="userName"
-    type="text"
-    placeholder="Enter your name"
-    maxlength="30"
->
-                <button id="newMeeting" class="primary">
-                    + New meeting
-                </button>
-
+                <label class="field-label" for="userName">YOUR NAME</label>
+                <input id="userName" class="name-input" type="text" placeholder="How should we call you?" maxlength="30" autocomplete="name">
+                <button id="newMeeting" class="primary"><span class="button-icon">＋</span> Start a new meeting <span class="button-arrow">↗</span></button>
+                <div class="join-divider"><span>OR JOIN WITH A CODE</span></div>
                 <div class="join-box">
-                    <input
-                        id="meetingCode"
-                        type="text"
-                        placeholder="Enter meeting code"
-                        maxlength="12"
-                    >
-
-                    <button id="joinMeeting">
-                        Join
-                    </button>
+                    <span class="code-icon">⌗</span>
+                    <input id="meetingCode" type="text" placeholder="Enter meeting code" maxlength="12" aria-label="Meeting code">
+                    <button id="joinMeeting" aria-label="Join meeting">Join <span>→</span></button>
                 </div>
+                <p class="helper-note"><span>✓</span> No account needed. Just you and your people.</p>
             </div>
         </section>
-
-        <section class="preview">
+        <section class="preview" aria-label="Camera preview">
+            <div class="preview-orbit orbit-one"></div><div class="preview-orbit orbit-two"></div>
             <div class="preview-card">
-
-                <div class="preview-top">
-                    <span>Preview</span>
-                    <span class="status">
-                        ● Ready
-                    </span>
-                </div>
-
+                <div class="preview-top"><div><span class="live-indicator"></span><span class="preview-title">Your space</span><span class="preview-subtitle">· Camera check</span></div><span class="status"><span></span> READY</span></div>
                 <div class="camera-box">
                     <video id="previewVideo" autoplay muted playsinline></video>
-
-                    <div id="cameraMessage">
-                        Camera preview
-                    </div>
+                    <div class="camera-overlay"></div>
+                    <div id="cameraMessage"><span class="camera-message-icon">▣</span><strong>You're looking good.</strong><span>Camera preview appears here</span></div>
+                    <div class="camera-caption"><span class="avatar-mini">Y</span><span>You</span><span class="caption-mic">🎙</span></div>
+                    <div class="camera-corner corner-tl"></div><div class="camera-corner corner-tr"></div><div class="camera-corner corner-bl"></div><div class="camera-corner corner-br"></div>
                 </div>
-
-                <div class="preview-controls">
-                    <button id="toggleMic">🎤</button>
-                    <button id="toggleCamera">📹</button>
-                </div>
-
+                <div class="preview-bottom"><div class="preview-tip"><span class="tip-spark">✦</span><div><strong>Make yourself at home</strong><small>Check your setup before joining</small></div></div><div class="preview-controls"><button id="toggleMic" type="button" aria-label="Toggle microphone" title="Toggle microphone">🎙</button><button id="toggleCamera" type="button" aria-label="Toggle camera" title="Toggle camera">▣</button></div></div>
             </div>
+            <div class="floating-note"><span class="floating-avatars"><i>J</i><i>M</i><i>A</i></span><span><strong>Better together</strong><small>Wherever you are</small></span><span class="heart">♡</span></div>
         </section>
-
     </main>
-
-    <footer>
-        FreeMeet • Free and open video meetings
-    </footer>
-
+    <footer><span>© FreeMeet</span><span class="footer-center"><span class="footer-star">✳</span> Made for real connection</span><span>Free to meet. Free to be.</span></footer>
     <script src="app.js"></script>
-
 </body>
 </html>
